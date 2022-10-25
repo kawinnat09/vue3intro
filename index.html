@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue 3 Introduction</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <img v-bind:src="image" alt="image" /> -->
+      <img :src="image" :alt="description" :title="description" />
+      <h1>{{ product }}</h1>
+
+      <!-- <p v-if="inStock">In Stock</p>
+      <p v-else>Oh no 😢</p> -->
+      <!-- <p v-show="inStock">In Stock</p> -->
+
+      <p v-if="inventory > 10">In Stock</p>
+      <p v-else-if="inventory <= 10 && inventory > 0 ">Almost sold out</p>
+      <p v-else>Out of Stock</p>
+      <a :href="url">Made by Apple New York</a>
+    </div>
+
+    <!-- Import Js -->
+    <script src="./main.js"></script>
+  </body>
+</html>
